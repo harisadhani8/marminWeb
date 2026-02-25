@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarMin - Martabak Mini</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="hero" class="page active">
+      <div class="hero-content">
+        <h1 class="logo-text">Mar<span>Min</span></h1>
+        <p class="slogan">
+          Mood lagi turun? Mau yang Murah?<br>Martabak Mini solusinya!
+        </p>
+        <div class="image-circle">
+          <img src="assets/p1.png" alt="Martabak Mini" />
+        </div>
+        <h2 class="price-tag">SERBA 3RB !!!</h2>
+        <button class="btn-main" onclick="navigateTo('menu')">
+          Lihat Menu
+        </button>
+      </div>
+    </section>
+
+    <section id="menu" class="page">
+      <div class="header-bar">Varian Rasa Martabak</div>
+      <div class="menu-container">
+        <div class="menu-list" id="menuList"></div>
+        <button class="btn-order-now" onclick="navigateTo('form')">
+          Pesan sekarang
+        </button>
+      </div>
+    </section>
+
+    <section id="form" class="page">
+      <div class="form-container">
+        <div class="input-group">
+          <input type="text" id="nama" placeholder="Nama Penerima" />
+          <input type="text" id="kelas" placeholder="Kelas" />
+          <input type="tel" id="whatsapp" placeholder="No.Handphone" />
+        </div>
+        <button class="btn-final-order" onclick="sendOrder()">ORDER</button>
+      </div>
+    </section>
+
+    <section id="success" class="page">
+      <div class="success-content">
+        <div class="stars-bg"></div>
+        <div class="msg-box">PESANAN ANDA TELAH DI TERIMA</div>
+        <button class="btn-back" onclick="navigateTo('hero')">Kembali</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
