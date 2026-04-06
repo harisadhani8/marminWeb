@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 1. Responsivitas Header */
 .global-header {
   background-color: var(--header-bg);
   padding: 10px 5%;
@@ -49,11 +48,10 @@ body {
   font-size: 1.2rem;
 }
 
-/* 2. Responsivitas Layout Halaman */
 .page {
   display: none;
   width: 90%;
-  max-width: 1000px; /* Di desktop bisa lebih lebar */
+  max-width: 1000px; 
   margin: 0 auto;
   text-align: center;
 }
@@ -61,20 +59,18 @@ body {
   display: block;
 }
 
-/* 3. Grid Menu (Agar Gambar Sejajar di Desktop) */
 .menu-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default mobile: 1 kolom */
+  grid-template-columns: 1fr; 
   gap: 20px;
-  justify-items: center; /* Memastikan semua item di tengah */
+  justify-items: center; 
   margin-bottom: 30px;
 }
 
-/* Desktop/Laptop Mode */
 @media (min-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
-  } /* 2 kolom di laptop */
+  } 
   #hero {
     max-width: 600px;
   }
@@ -82,14 +78,13 @@ body {
 @media (min-width: 1024px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr);
-  } /* 3 kolom di desktop besar */
+  } 
 }
 
-/* 4. Styling Menu Item */
 .menu-item {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Gambar pasti di tengah */
+  align-items: center; 
   width: 100%;
 }
 .menu-item img {
@@ -101,7 +96,6 @@ body {
   margin: 10px 0;
 }
 
-/* 5. Centering Instruksi (Point 2) */
 .form-instruction {
   width: 100%;
   text-align: center;
@@ -111,7 +105,6 @@ body {
   margin: 20px 0;
 }
 
-/* 6. Tombol 3D Sesuai Gambar */
 .btn-design {
   background-color: var(--beige);
   color: var(--dark-brown);
@@ -149,7 +142,6 @@ body {
   justify-content: flex-start;
 }
 
-/* UI Elements Tambahan */
 #hero {
   background-color: var(--brown);
   padding: 40px 20px;
