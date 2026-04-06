@@ -5,73 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MarMin - Martabak Mini</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="global-header">
-      <div class="logo-container">
-        <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
-        <span class="header-title">MarMin by HaFaRis</span>
-      </div>
+      <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
+      <span class="header-title">MarMin by HaFaRis</span>
     </header>
 
     <section id="hero" class="page active">
-      <div class="hero-content">
-        <h1 class="logo-text">Mar<span>Min</span></h1>
-        <p class="slogan">
-          Mood lagi turun? Mau yang Murah?<br />Martabak Mini solusinya!
-        </p>
-        <div class="image-circle">
-          <img src="assets/p1.png" alt="Martabak Mini" />
-        </div>
-        <h2 class="price-tag">SERBA 3RB !!!</h2>
-        <button class="btn-design" onclick="navigateTo('menu')">
-          LIHAT MENU
-        </button>
-      </div>
+      <h1 class="logo-text">Mar<span>Min</span></h1>
+      <p class="slogan">
+        Mood lagi turun? Mau yang Murah?<br />Martabak Mini solusinya!
+      </p>
+      <div class="image-circle"><img src="assets/p1.png" /></div>
+      <h2 class="price-tag">SERBA 3RB !!!</h2>
+      <button class="btn-design" onclick="navigateTo('menu')">
+        LIHAT MENU
+      </button>
     </section>
 
     <section id="menu" class="page">
-      <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('hero')">
-          ← Kembali
-        </button>
-      </div>
-      <div class="header-bar">Varian Rasa Martabak</div>
-      <div class="menu-container">
-        <div id="menuList" class="menu-grid"></div>
-        <button class="btn-design" onclick="validateMenuSelection()">
-          PESAN SEKARANG
-        </button>
-      </div>
+      <button class="btn-back-nav" onclick="navigateTo('hero')">
+        ← Kembali
+      </button>
+      <h2 style="color: white; margin-bottom: 15px; clear: both">
+        Pilih Varian
+      </h2>
+      <div id="menuList" class="menu-grid"></div>
+      <button class="btn-design" onclick="validateMenuSelection()">
+        PESAN SEKARANG
+      </button>
     </section>
 
     <section id="form" class="page">
-      <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('menu')">
-          ← Kembali
-        </button>
+      <button class="btn-back-nav" onclick="navigateTo('menu')">
+        ← Kembali
+      </button>
+      <div class="form-instruction" style="clear: both">
+        Harap isi dengan benar!
       </div>
-      <div class="form-instruction">Harap isi dengan benar!</div>
       <div class="form-box">
         <input type="text" id="nama" placeholder="Nama Penerima" />
         <input type="text" id="kelas" placeholder="Kelas" />
-        <input type="tel" id="whatsapp" placeholder="No.Handphone" />
+        <input type="tel" id="whatsapp" placeholder="No. Handphone" />
       </div>
       <button class="btn-design" onclick="sendOrder()">ORDER</button>
     </section>
 
     <section id="success" class="page">
-      <div class="success-content">
-        <div class="msg-box">PESANAN ANDA TELAH DITERIMA</div>
-        <button class="btn-design" onclick="navigateTo('hero')">KEMBALI</button>
+      <div
+        style="
+          background: white;
+          padding: 30px;
+          border-radius: 20px;
+          border: 4px solid var(--dark-brown);
+        "
+      >
+        <h2 style="color: var(--dark-brown)">PESANAN DITERIMA!</h2>
+        <button class="btn-design" onclick="navigateTo('hero')">
+          KEMBALI KE AWAL
+        </button>
       </div>
     </section>
 
     <footer class="global-footer">@ 2026 HaFaRis</footer>
+
     <script src="script.js"></script>
   </body>
 </html>
