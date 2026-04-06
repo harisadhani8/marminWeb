@@ -9,17 +9,16 @@ const menuData = [
 let cart = {};
 const menuList = document.getElementById("menuList");
 
-// Generate Menu List
 menuData.forEach((item) => {
   cart[item.nama] = 0;
   menuList.innerHTML += `
     <div class="menu-item">
-        <p style="font-weight:900; color:white; font-size:1.1rem;">${item.id}. ${item.nama}</p>
-        <img src="${item.img}" alt="${item.nama}">
-        <div class="qty-ctrl">
-            <button class="qty-btn" onclick="updateQty('${item.nama}', -1)">-</button>
-            <span class="qty-num" id="qty-${item.id}">0</span>
-            <button class="qty-btn" onclick="updateQty('${item.nama}', 1)">+</button>
+        <p style="font-weight:900; color:white; font-size:1.1rem;">${item.nama}</p>
+        <img src="${item.img}">
+        <div class="qty-wrapper">
+            <button class="qty-control-btn" onclick="updateQty('${item.nama}', -1)">-</button>
+            <span id="qty-${item.id}" class="qty-display">0</span>
+            <button class="qty-control-btn" onclick="updateQty('${item.nama}', 1)">+</button>
         </div>
     </div>`;
 });
