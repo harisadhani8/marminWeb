@@ -13,16 +13,14 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Memastikan body tidak tumpang tindih dengan header & footer */
 body {
   background-color: var(--teal);
   margin: 0;
-  padding-top: 80px; /* Ruang untuk header */
-  padding-bottom: 100px; /* Ruang untuk footer */
+  padding-top: 80px; 
+  padding-bottom: 100px; 
   min-height: 100vh;
 }
 
-/* --- HEADER --- */
 .global-header {
   background-color: var(--header-bg);
   padding: 10px 20px;
@@ -39,7 +37,7 @@ body {
   height: 40px;
   border-radius: 50%;
   border: 2px solid white;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .header-title {
   color: var(--dark-brown);
@@ -47,7 +45,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* --- LAYOUT HALAMAN --- */
 .page {
   display: none;
   width: 90%;
@@ -59,7 +56,6 @@ body {
   display: block;
 }
 
-/* --- HERO SECTION --- */
 #hero {
   background-color: var(--brown);
   padding: 30px 15px;
@@ -103,7 +99,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* --- MENU SECTION --- */
 .menu-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -133,7 +128,6 @@ body {
   margin: 10px 0;
 }
 
-/* --- TOMBOL 3D (Point 3) --- */
 .btn-design {
   background-color: var(--beige);
   color: var(--dark-brown);
@@ -165,7 +159,6 @@ body {
   float: left;
 }
 
-/* --- FORM --- */
 .form-instruction {
   font-weight: 900;
   color: var(--dark-brown);
@@ -188,7 +181,6 @@ input {
   font-weight: bold;
 }
 
-/* --- FOOTER FULL (Solusi Point 1) --- */
 .global-footer {
   background-color: var(--dark-brown);
   color: white;
