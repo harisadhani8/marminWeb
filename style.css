@@ -193,3 +193,39 @@ input {
   font-weight: 900;
   z-index: 1000;
 }
+
+.qty-wrapper {
+  display: flex; 
+  background: white; 
+  border-radius: 12px; 
+  border: 3px solid var(--dark-brown);
+  overflow: hidden;
+  width: 160px;
+}
+
+.qty-control-btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none; 
+  background: none; 
+  font-weight: 900; 
+  font-size: 1.5rem; 
+  cursor: pointer;
+  color: var(--dark-brown);
+  transition: background 0.2s;
+}
+
+.qty-control-btn:active {
+  background-color: #ddd;
+}
+
+.qty-display {
+  padding: 12px 20px; 
+  font-weight: 900;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+}
