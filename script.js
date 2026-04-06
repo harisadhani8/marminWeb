@@ -9,7 +9,6 @@ const menuData = [
 let cart = {};
 const menuList = document.getElementById("menuList");
 
-// Generate Menu List
 menuData.forEach((item) => {
   cart[item.nama] = 0;
   menuList.innerHTML += `
