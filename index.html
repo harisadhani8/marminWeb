@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MarMin - Martabak Mini</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
+
     <header class="global-header">
-      <div class="logo-container">
-        <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
-        <span class="header-title">MarMin by HaFaRis</span>
-      </div>
+      <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
+      <span class="header-title">MarMin by HaFaRis</span>
     </header>
 
+    <div id="toastNotif" class="toast-notif">
+      ✅ Pesanan berhasil dikirim ke WhatsApp!
+    </div>
+
     <section id="hero" class="page active">
-      <div class="hero-content">
+      <div id="hero-card">
         <h1 class="logo-text">Mar<span>Min</span></h1>
         <p class="slogan">
           Mood lagi turun? Mau yang Murah?<br />Martabak Mini solusinya!
@@ -36,42 +35,81 @@
 
     <section id="menu" class="page">
       <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('hero')">
-          ← Kembali
-        </button>
+        <button class="btn-back-nav" onclick="navigateTo('hero')">Kembali</button>
       </div>
-      <div class="header-bar">Varian Rasa Martabak</div>
-      <div class="menu-container">
-        <div id="menuList" class="menu-grid"></div>
-        <button class="btn-design" onclick="validateMenuSelection()">
-          PESAN SEKARANG
-        </button>
+      <h2 class="page-title">Pilih Varian</h2>
+
+      <div id="menuList" class="menu-grid"></div>
+
+      <div class="total-box">
+        <span class="total-label">Total Harga:</span>
+        <span class="total-amount" id="totalHarga">Rp 0</span>
       </div>
+
+      <button class="btn-design" onclick="validateMenuSelection()">
+        PESAN SEKARANG
+      </button>
     </section>
 
     <section id="form" class="page">
       <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('menu')">
-          ← Kembali
-        </button>
+        <button class="btn-back-nav" onclick="navigateTo('menu')">Kembali</button>
       </div>
-      <div class="form-instruction">Harap isi dengan benar!</div>
+      <div class="form-instruction">Isi yang benar ya cuyy!</div>
       <div class="form-box">
-        <input type="text" id="nama" placeholder="Nama Penerima" />
-        <input type="text" id="kelas" placeholder="Kelas" />
-        <input type="tel" id="whatsapp" placeholder="No.Handphone" />
+        <input type="text"  id="nama"      placeholder="Nama Penerima" />
+        <input type="text"  id="kelas"     placeholder="Kelas" />
+        <input type="tel"   id="whatsapp"  placeholder="No. Handphone" />
       </div>
-      <button class="btn-design" onclick="sendOrder()">ORDER</button>
+      <button class="btn-design" onclick="showSummary()">LANJUT</button>
+    </section>
+
+    <section id="summary" class="page">
+      <div class="nav-container">
+        <button class="btn-back-nav" onclick="navigateTo('form')">Kembali</button>
+      </div>
+      <div class="form-instruction">Cek Pesanan Kamu!</div>
+
+      <div class="summary-box">
+        <div class="summary-row">
+          <span class="summary-key">👤 Nama</span>
+          <span class="summary-val" id="sum-nama">-</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-key">🏫 Kelas</span>
+          <span class="summary-val" id="sum-kelas">-</span>
+        </div>
+        <hr class="summary-divider" />
+        <p class="summary-subtitle">📋 Detail Pesanan:</p>
+        <div id="sum-items"></div>
+        <hr class="summary-divider" />
+        <div class="summary-row summary-total">
+          <span class="summary-key">💰 Total</span>
+          <span class="summary-val" id="sum-total">Rp 0</span>
+        </div>
+      </div>
+
+      <button class="btn-design btn-confirm" onclick="sendOrder()">
+        KONFIRMASI & KIRIM
+      </button>
     </section>
 
     <section id="success" class="page">
-      <div class="success-content">
-        <div class="msg-box">PESANAN ANDA TELAH DITERIMA</div>
-        <button class="btn-design" onclick="navigateTo('hero')">KEMBALI</button>
+      <div class="success-card">
+        <div class="success-icon">🎉</div>
+        <h2 class="success-title">PESANAN DIKIRIM!</h2>
+        <p class="success-sub">
+          Pesananmu sudah diteruskan ke WhatsApp MarMin.<br />
+          Tunggu konfirmasi ya!
+        </p>
+        <button class="btn-design" onclick="resetAndGoHome()">
+          KEMBALI KE AWAL
+        </button>
       </div>
     </section>
 
-    <footer class="global-footer">@ 2026 HaFaRis</footer>
+    <footer class="global-footer">© 2026 HaFaRis. Dibuat dengan seduhan kopi.</footer>
+
     <script src="script.js"></script>
   </body>
 </html>
