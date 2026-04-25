@@ -11,7 +11,7 @@ menuData.forEach((item) => {
   cart[item.nama] = 0;
   menuList.innerHTML += `
     <div class="menu-item">
-        <p style="font-weight:900; color:white; font-size:1.1rem;">${item.nama}</p>
+        <p style="font-weight:900; color:dark-brown; font-size:1.1rem;">${item.nama}</p>
         <img src="${item.img}">
         <div class="qty-wrapper">
             <button class="qty-control-btn" onclick="updateQty('${item.nama}', -1)">-</button>
