@@ -10,7 +10,11 @@
 
     <header class="global-header">
       <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
+<<<<<<< HEAD
       <span class="header-title">MarMin by HaFaRis</span>
+=======
+      <span class="header-title">  MarMin by HaFaRis</span>
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
     </header>
 
     <div id="toastNotif" class="toast-notif">
@@ -18,6 +22,7 @@
     </div>
 
     <section id="hero" class="page active">
+<<<<<<< HEAD
       <div id="hero-card">
         <h1 class="logo-text">Mar<span>Min</span></h1>
         <p class="slogan">
@@ -46,12 +51,34 @@
         <span class="total-amount" id="totalHarga">Rp 0</span>
       </div>
 
+=======
+      <h1 class="logo-text">Mar<span>Min</span></h1>
+      <p class="slogan">
+        Mood lagi turun? Mau yang Murah?<br />Martabak Mini solusinya!
+      </p>
+      <div class="image-circle"><img src="assets/p1.png" /></div>
+      <h1 class="price-tag">SERBA 3RB !!!</h1>
+      <button class="btn-design" onclick="navigateTo('menu')">
+        LIHAT MENU
+      </button>
+    </section>
+
+    <section id="menu" class="page">
+      <button class="btn-back-nav" onclick="navigateTo('hero')">
+        ← Kembali
+      </button>
+      <h2 style="color: white; margin-bottom: 15px; clear: both">
+        Pilih Varian
+      </h2>
+      <div id="menuList" class="menu-grid"></div>
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
       <button class="btn-design" onclick="validateMenuSelection()">
         PESAN SEKARANG
       </button>
     </section>
 
     <section id="form" class="page">
+<<<<<<< HEAD
       <div class="nav-container">
         <button class="btn-back-nav" onclick="navigateTo('menu')">Kembali</button>
       </div>
@@ -60,6 +87,18 @@
         <input type="text"  id="nama"      placeholder="Nama Penerima" />
         <input type="text"  id="kelas"     placeholder="Kelas" />
         <input type="tel"   id="whatsapp"  placeholder="No. Handphone" />
+=======
+      <button class="btn-back-nav" onclick="navigateTo('menu')">
+        ← Kembali
+      </button>
+      <div class="form-instruction" style="clear: both">
+        Harap isi dengan benar!
+      </div>
+      <div class="form-box">
+        <input type="text" id="nama" placeholder="Nama Penerima" />
+        <input type="text" id="kelas" placeholder="Kelas" />
+        <input type="tel" id="whatsapp" placeholder="No. Handphone" />
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
       </div>
       <button class="btn-design" onclick="showSummary()">LANJUT</button>
     </section>
@@ -95,6 +134,7 @@
     </section>
 
     <section id="success" class="page">
+<<<<<<< HEAD
       <div class="success-card">
         <div class="success-icon">🎉</div>
         <h2 class="success-title">PESANAN DIKIRIM!</h2>
@@ -103,12 +143,28 @@
           Tunggu konfirmasi ya!
         </p>
         <button class="btn-design" onclick="resetAndGoHome()">
+=======
+      <div
+        style="
+          background: white;
+          padding: 30px;
+          border-radius: 20px;
+          border: 4px solid var(--dark-brown);
+        "
+      >
+        <h2 style="color: var(--dark-brown)">PESANAN DITERIMA!</h2>
+        <button class="btn-design" onclick="navigateTo('hero')">
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
           KEMBALI KE AWAL
         </button>
       </div>
     </section>
 
+<<<<<<< HEAD
     <footer class="global-footer">© 2026 HaFaRis. Dibuat dengan seduhan kopi.</footer>
+=======
+    <footer class="global-footer">@ 2026 HaFaRis</footer>
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
 
     <script src="script.js"></script>
   </body>

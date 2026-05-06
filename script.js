@@ -1,11 +1,17 @@
 const HARGA_PER_ITEM = 3000; // Rp 3.000 per martabak
 
 const menuData = [
+<<<<<<< HEAD
   { id: 1, nama: "Martabak Coklat Keju",      img: "assets/cokke.png"  },
   { id: 2, nama: "Martabak Keju Susu",         img: "assets/ke.png"     },
   { id: 3, nama: "Martabak Susu Oreo",         img: "assets/susor.png"  },
   { id: 4, nama: "Martabak Susu Ovomaltine",   img: "assets/susov.png"  },
   { id: 5, nama: "Martabak Coklat Kacang",     img: "assets/cokka.png"  },
+=======
+  { id: 1, nama: "Martabak Coklat Keju", img: "assets/cokke.png" },
+  { id: 2, nama: "Martabak Keju", img: "assets/ke.png" },
+  { id: 3, nama: "Martabak Coklat", img: "assets/susov.png" },
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
 ];
 
 let cart = {};
@@ -17,6 +23,7 @@ menuData.forEach((item) => {
 
   menuList.innerHTML += `
     <div class="menu-item">
+<<<<<<< HEAD
       <p>${item.id}. ${item.nama}</p>
       <img src="${item.img}" alt="${item.nama}" loading="lazy">
       <div class="qty-ctrl">
@@ -26,6 +33,16 @@ menuData.forEach((item) => {
       </div>
     </div>
   `;
+=======
+        <p style="font-weight:900; color:dark-brown; font-size:1.1rem;">${item.nama}</p>
+        <img src="${item.img}">
+        <div class="qty-wrapper">
+            <button class="qty-control-btn" onclick="updateQty('${item.nama}', -1)">-</button>
+            <span id="qty-${item.id}" class="qty-display">0</span>
+            <button class="qty-control-btn" onclick="updateQty('${item.nama}', 1)">+</button>
+        </div>
+    </div>`;
+>>>>>>> 232a9cedebd21dae4aeb46a28b76666a1de47e45
 });
 
 function updateQty(name, change) {
