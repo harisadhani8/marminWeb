@@ -62,7 +62,7 @@ function validateMenuSelection() {
   const totalItem = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
 
   if (totalItem === 0) {
-    alert("Silahkan pilih martabaknya dulu yaa!");
+    alert("Pilih martabaknya dulu cuyy!");
   } else {
     navigateTo("form");
   }
@@ -82,7 +82,7 @@ function showSummary() {
   document.getElementById("sum-kelas").innerText = kelas;
 
   const sumItems = document.getElementById("sum-items");
-  sumItems.innerHTML = ""; // Kosongkan dulu sebelum diisi ulang
+  sumItems.innerHTML = ""; 
 
   let totalItem  = 0;
   let totalHarga = 0;
@@ -138,7 +138,7 @@ function sendOrder() {
     "_blank"
   );
 
-  showToast("✅ Pesanan berhasil dikirim ke WhatsApp!");
+  showToast("Pesanan berhasil dikirim ke WhatsApp!");
 
   navigateTo("success");
 }
