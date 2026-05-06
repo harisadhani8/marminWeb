@@ -2,10 +2,10 @@ const HARGA_PER_ITEM = 3000;
 
 const menuData = [
   { id: 1, nama: "Martabak Coklat Keju",      img: "assets/cokke.png"  },
-  { id: 2, nama: "Martabak Keju Susu",         img: "assets/ke.png"     },
-  { id: 3, nama: "Martabak Susu Oreo",         img: "assets/susor.png"  },
-  { id: 4, nama: "Martabak Susu Ovomaltine",   img: "assets/susov.png"  },
-  { id: 5, nama: "Martabak Coklat Kacang",     img: "assets/cokka.png"  },
+  { id: 2, nama: "Martabak Keju",         img: "assets/ke.png"     },
+  { id: 3, nama: "Martabak Coklat",         img: "assets/susor.png"  },
+  { id: 4, nama: "Martabak Oreo",   img: "assets/susov.png"  },
+  { id: 5, nama: "Martabak Kacang",     img: "assets/cokka.png"  },
 ];
 
 let cart = {};
