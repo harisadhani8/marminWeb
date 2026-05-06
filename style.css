@@ -1,12 +1,3 @@
-/* =====================================================
-   MARMIN - style.css
-   Catatan: CSS ini dibersihkan dari duplikasi yang ada
-   di versi sebelumnya. Setiap blok hanya ditulis sekali.
-   ===================================================== */
-
-/* --- Variabel Warna (Color Variables) ---
-   Dengan :root, kita menyimpan warna di satu tempat.
-   Kalau mau ganti warna, cukup edit di sini saja. */
 :root {
   --brown:      #b37a4d;
   --teal:       #7fb3a3;
@@ -15,19 +6,13 @@
   --dark-brown: #4a2c2a;
 }
 
-/* --- Reset Bawaan Browser ---
-   Setiap browser punya margin/padding default yang berbeda-beda.
-   Kita reset semua ke 0 supaya tampilannya konsisten. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georgia", serif;  /* Font lebih hangat, cocok untuk makanan */
+  font-family: "Georgia", serif;  
 }
 
-/* --- Body ---
-   padding-top & padding-bottom memberi ruang agar konten
-   tidak tertutup header dan footer yang posisinya fixed. */
 body {
   background-color: var(--teal);
   padding-top: 70px;
@@ -35,16 +20,13 @@ body {
   min-height: 100vh;
 }
 
-/* =====================================================
-   HEADER
-   ===================================================== */
 .global-header {
   background-color: var(--header-bg);
   padding: 12px 20px;
-  position: fixed;    /* Tetap di atas walau halaman di-scroll */
+  position: fixed;    
   top: 0;
   width: 100%;
-  z-index: 1000;      /* Angka besar = tampil di depan elemen lain */
+  z-index: 1000;      
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,11 +45,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* =====================================================
-   SISTEM HALAMAN (PAGE SYSTEM)
-   Hanya halaman dengan class "active" yang ditampilkan.
-   JavaScript yang menambah/melepas class "active" ini.
-   ===================================================== */
 .page {
   display: none;
   width: 92%;
@@ -79,14 +56,6 @@ body {
   display: block;
 }
 
-/* =====================================================
-   HALAMAN 1: HERO
-   ===================================================== */
-
-/* Override max-width khusus halaman hero.
-   Halaman lain tetap pakai max-width 620px dari .page.
-   Karena #hero lebih spesifik dari .page, aturan ini
-   akan menang (konsep CSS Specificity). */
 #hero {
   max-width: 960px;
 }
@@ -134,9 +103,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* =====================================================
-   HALAMAN 2: MENU
-   ===================================================== */
 .page-title {
   color: white;
   font-size: 1.5rem;
@@ -145,10 +111,6 @@ body {
   text-shadow: 1px 1px var(--dark-brown);
 }
 
-/* Grid responsif untuk kartu menu:
-   - Layar kecil (HP): 1 kolom
-   - Layar sedang (tablet): 2 kolom
-   - Layar besar (laptop): 3 kolom  */
 .menu-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -170,7 +132,6 @@ body {
   padding: 12px;
   border-radius: 15px;
   border: 2px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(5px);  /* Efek kaca buram */
 }
 .menu-item-nama {
   font-weight: 900;
@@ -190,7 +151,6 @@ body {
   margin: 8px 0;
 }
 
-/* Tombol +/- untuk mengatur jumlah (quantity) */
 .qty-ctrl {
   display: flex;
   align-items: center;
@@ -208,7 +168,6 @@ body {
   cursor: pointer;
   color: var(--dark-brown);
   line-height: 1;
-  transition: transform 0.1s;  /* Animasi kecil saat diklik */
 }
 .qty-btn:active {
   transform: scale(0.9);
@@ -222,7 +181,6 @@ body {
   text-shadow: 1px 1px rgba(0,0,0,0.5);
 }
 
-/* FITUR BARU: Kotak Total Harga */
 .total-harga-box {
   background: var(--dark-brown);
   color: white;
@@ -242,9 +200,6 @@ body {
   font-size: 1.3rem;
 }
 
-/* =====================================================
-   HALAMAN 3: FORM
-   ===================================================== */
 .form-instruction {
   font-weight: 900;
   color: var(--dark-brown);
@@ -256,7 +211,6 @@ body {
   border: 2px solid var(--dark-brown);
 }
 
-/* FITUR BARU: Kotak Ringkasan Pesanan */
 .ringkasan-box {
   background: white;
   border: 3px solid var(--dark-brown);
@@ -316,15 +270,12 @@ input {
   transition: border-color 0.2s;
 }
 input:focus {
-  border-color: var(--brown);  /* Warna border berubah saat diklik */
+  border-color: var(--brown);
 }
 input:last-child {
   margin-bottom: 0;
 }
 
-/* =====================================================
-   HALAMAN 4: SUKSES
-   ===================================================== */
 .success-card {
   background: white;
   padding: 40px 25px;
@@ -349,11 +300,6 @@ input:last-child {
   margin-bottom: 20px;
 }
 
-/* =====================================================
-   KOMPONEN BERSAMA (SHARED COMPONENTS)
-   ===================================================== */
-
-/* Tombol utama yang dipakai di semua halaman */
 .btn-design {
   background-color: var(--beige);
   color: var(--dark-brown);
@@ -365,18 +311,15 @@ input:last-child {
   font-weight: 900;
   font-size: 1.1rem;
   cursor: pointer;
-  /* box-shadow memberi efek tombol 3D */
-  box-shadow: 0 6px 0 var(--dark-brown);
   transition: all 0.1s;
   margin: 10px auto;
   display: block;
 }
 .btn-design:active {
-  transform: translateY(4px);   /* Tombol "turun" saat diklik */
+  transform: translateY(4px);   
   box-shadow: 0 2px 0 var(--dark-brown);
 }
 
-/* Tombol kembali di pojok kiri */
 .nav-container {
   width: 100%;
   display: flex;
@@ -397,20 +340,11 @@ input:last-child {
   background: var(--beige);
 }
 
-/* =====================================================
-   FITUR BARU: TOAST NOTIFICATION
-   
-   Toast = notifikasi kecil yang muncul sebentar lalu hilang.
-   Mirip notifikasi WA di HP kamu.
-   
-   Defaultnya: tersembunyi (opacity 0, posisi di bawah layar).
-   Saat class "show" ditambahkan JS: muncul ke atas.
-   ===================================================== */
 .toast-notif {
-  position: fixed;       /* Posisinya relatif terhadap layar, bukan halaman */
-  bottom: 90px;          /* Di atas footer */
+  position: fixed;       
+  bottom: 90px;          
   left: 50%;
-  transform: translateX(-50%) translateY(30px);  /* Geser horizontal ke tengah */
+  transform: translateX(-50%) translateY(30px); 
   background: var(--dark-brown);
   color: white;
   padding: 14px 28px;
@@ -418,23 +352,18 @@ input:last-child {
   font-weight: 900;
   font-size: 1rem;
   z-index: 9999;
-  /* Transisi untuk efek animasi muncul/hilang */
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  pointer-events: none;  /* Toast tidak bisa diklik, biar tidak mengganggu */
+  pointer-events: none;  
   white-space: nowrap;
   border: 2px solid var(--beige);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-/* Saat class "show" aktif: toast muncul ke layar */
 .toast-notif.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
 .global-footer {
   background-color: var(--dark-brown);
   color: white;
