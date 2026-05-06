@@ -8,13 +8,15 @@
   </head>
   <body>
 
-    <!-- ===== HEADER TETAP DI ATAS ===== -->
     <header class="global-header">
       <img src="assets/hafaris.png" alt="Logo" class="logo-image" />
       <span class="header-title">MarMin by HaFaRis</span>
     </header>
 
-    <!-- ===== HALAMAN 1: HERO / LANDING ===== -->
+    <div id="toastNotif" class="toast-notif">
+      ✅ Pesanan berhasil dikirim ke WhatsApp!
+    </div>
+
     <section id="hero" class="page active">
       <div id="hero-card">
         <h1 class="logo-text">Mar<span>Min</span></h1>
@@ -31,24 +33,17 @@
       </div>
     </section>
 
-    <!-- ===== HALAMAN 2: MENU PILIHAN ===== -->
     <section id="menu" class="page">
       <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('hero')">← Kembali</button>
+        <button class="btn-back-nav" onclick="navigateTo('hero')">Kembali</button>
       </div>
       <h2 class="page-title">Pilih Varian</h2>
 
-      <!-- Menu item akan di-render oleh JavaScript di sini -->
       <div id="menuList" class="menu-grid"></div>
 
-      <!-- 
-        FITUR BARU: Total Harga Otomatis
-        Div ini akan diupdate tiap kali pengguna klik + atau -
-        Harga per item = Rp 3.000 (sesuai konsep "SERBA 3RB")
-      -->
-      <div id="totalHargaBox" class="total-harga-box">
-        <span>Total Pesanan:</span>
-        <span id="totalHargaTeks">Rp 0</span>
+      <div class="total-box">
+        <span class="total-label">Total Harga:</span>
+        <span class="total-amount" id="totalHarga">Rp 0</span>
       </div>
 
       <button class="btn-design" onclick="validateMenuSelection()">
@@ -56,53 +51,64 @@
       </button>
     </section>
 
-    <!-- ===== HALAMAN 3: FORM DATA DIRI ===== -->
     <section id="form" class="page">
       <div class="nav-container">
-        <button class="btn-back-nav" onclick="navigateTo('menu')">← Kembali</button>
+        <button class="btn-back-nav" onclick="navigateTo('menu')">Kembali</button>
       </div>
-      <div class="form-instruction">Harap isi dengan benar!</div>
-
-      <!-- 
-        FITUR BARU: Ringkasan Pesanan
-        Div ini akan diisi oleh JavaScript dengan daftar item yang dipilih
-      -->
-      <div id="ringkasanPesanan" class="ringkasan-box">
-        <h3 class="ringkasan-judul">📋 Ringkasan Pesanan</h3>
-        <div id="isiRingkasan"></div>
-        <div class="ringkasan-total" id="ringkasanTotal"></div>
-      </div>
-
+      <div class="form-instruction">Isi yang benar ya cuyy!</div>
       <div class="form-box">
         <input type="text"  id="nama"      placeholder="Nama Penerima" />
         <input type="text"  id="kelas"     placeholder="Kelas" />
         <input type="tel"   id="whatsapp"  placeholder="No. Handphone" />
       </div>
-      <button class="btn-design" onclick="sendOrder()">ORDER</button>
+      <button class="btn-design" onclick="showSummary()">LANJUT</button>
     </section>
 
-    <!-- ===== HALAMAN 4: SUKSES ===== -->
+    <section id="summary" class="page">
+      <div class="nav-container">
+        <button class="btn-back-nav" onclick="navigateTo('form')">Kembali</button>
+      </div>
+      <div class="form-instruction">Cek Pesanan Kamu!</div>
+
+      <div class="summary-box">
+        <div class="summary-row">
+          <span class="summary-key">👤 Nama</span>
+          <span class="summary-val" id="sum-nama">-</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-key">🏫 Kelas</span>
+          <span class="summary-val" id="sum-kelas">-</span>
+        </div>
+        <hr class="summary-divider" />
+        <p class="summary-subtitle">📋 Detail Pesanan:</p>
+        <div id="sum-items"></div>
+        <hr class="summary-divider" />
+        <div class="summary-row summary-total">
+          <span class="summary-key">💰 Total</span>
+          <span class="summary-val" id="sum-total">Rp 0</span>
+        </div>
+      </div>
+
+      <button class="btn-design btn-confirm" onclick="sendOrder()">
+        KONFIRMASI & KIRIM
+      </button>
+    </section>
+
     <section id="success" class="page">
       <div class="success-card">
-        <div class="success-icon">✅</div>
-        <h2 class="success-judul">PESANAN DITERIMA!</h2>
-        <p class="success-sub">Pesananmu sudah dikirim ke WhatsApp MarMin.<br/>Tunggu konfirmasi ya!</p>
-        <button class="btn-design" onclick="resetDanKembali()">
+        <div class="success-icon">🎉</div>
+        <h2 class="success-title">PESANAN DIKIRIM!</h2>
+        <p class="success-sub">
+          Pesananmu sudah diteruskan ke WhatsApp MarMin.<br />
+          Tunggu konfirmasi ya!
+        </p>
+        <button class="btn-design" onclick="resetAndGoHome()">
           KEMBALI KE AWAL
         </button>
       </div>
     </section>
 
-    <!-- 
-      FITUR BARU: Notifikasi Sukses (Toast Notification)
-      Ini adalah kotak notifikasi kecil yang muncul di pojok layar.
-      Awalnya tersembunyi, akan ditampilkan lewat JavaScript saat order berhasil.
-    -->
-    <div id="toastNotif" class="toast-notif">
-      🎉 Pesanan berhasil dikirim!
-    </div>
-
-    <footer class="global-footer">© 2026 HaFaRis. Dibuat dengan Semangat n Kopi.</footer>
+    <footer class="global-footer">© 2026 HaFaRis. Dibuat dengan seduhan kopi.</footer>
 
     <script src="script.js"></script>
   </body>
